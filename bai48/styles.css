@@ -1,0 +1,60 @@
+body {
+    background-color: #9acdfd; /* Light blue background */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #9acdfd; /* White background for form */
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto; /* Center the form */
+}
+
+h1 {
+    text-align: center;
+    color: #00796b; /* Dark teal color */
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%; /* Full width input fields */
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #00796b; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+}
+
+button {
+    background-color: #00796b; /* Dark teal background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #004d40; /* Darker shade on hover */
+}
+
+.button-container {
+    text-align: center; /* Center buttons */
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Classifieds Search Form</title>
+
+    <style>
+        p {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #088484;
+            color: white;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse; /* Ensures there is no spacing between cells */
+        }
+        th, td, label {
+            text-align: left; /* Aligns content to the left */
+            padding: 10px;
+            vertical-align: top;
+
+        }
+
+        tr {
+            border-spacing: 10px; /* Ensures no spacing between rows */
+
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        #labphy {
+            display: inline-block; /* or block */
+            max-width: 150px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <p>
+        <img src="hinh/Logo.gif">
+    </p>
+    <h1>Newborn Registration</h1>
+
+
+    <form>
+        <table>
+            <tr>
+                <td colspan="1">
+                    <label for="date">Date:</label>
+                    <input id="date" type="date">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <label for="fname">1) Infant's first Name:</label>
+                    <input type="text" id="fname" name="fname" required>
+                    <label for="lname">Last:</label>
+                    <input type="text" id="lname" name="lname" required></td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2">
+                    <label for="ssn">2) Medical Record#:</label>
+                    <input type="number" id="ssn" name="ssn" required>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2">
+                    <label for="dob">3) Date of birth:</label>
+                    <input id="dob" type="date">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <label for="wei">4) Birth weight:</label>
+                    <input id="wei" type="number">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <label for="sco">5) APGAR score:</label>
+                    <input id="sco" type="number">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <label for="mfname">6) Mother's first Name:</label>
+                    <input type="text" id="mfname" name="mfname" required>
+                    <label for="mlname">Last:</label>
+                    <input type="text" id="mlname" name="mlname" required></td>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <label for="ffname">7) Father's first Name:</label>
+                    <input type="text" id="ffname" name="ffname" required>
+                    <label for="flname">Last:</label>
+                    <input type="text" id="flname" name="flname" required></td>
+            </tr>
+
+            <tr>
+                <td colspan="1">
+                    <label for="phy" id="labphy">8) Physician (check all that apply:)</label>
+                    <select id="phy" multiple size="4">
+                        <option value="1">Dr.Warren Albert</option>
+                        <option value="2">Dr.Maria Alvarez</option>
+                        <option value="3">Dr.Karen Brinkman</option>
+                        <option value="4">Dr.Micheal Kerry</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <h1>
+                        <button onclick="alert('Registration submitted.')">Register</button>
+                        <button onclick="reset()">Reset</button>
+    
+                    </h1>
+                   
+                </td>
+
+            </tr>
+
+        </table>
+    </form>
+
+</body>
+
+</html>

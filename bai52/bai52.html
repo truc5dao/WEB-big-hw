@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        th, td, label, textarea {
+            vertical-align: top;
+            padding: 0 0 5px 0;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: right;
+        }
+        .button-container {
+            text-align: right; /* Align buttons to the right */
+        }
+
+    </style>
+</head>
+<body>
+
+    <form method="GET" action="new.html">
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Họ và tên:</label>
+                </td>
+
+                <td>
+                    <input type="text" id="name" name="name" required>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="email">Email:</label>
+            
+                </td>
+                <td>
+                    <input type="email" id="email" name="email" required>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Giới tính:</label>
+
+                </td>
+
+                <td>
+                    <input type="radio" id="male" name="gender" value="Nam" required>
+                    <label for="male">Nam</label>
+                    <input type="radio" id="female" name="gender" value="Nữ" required>
+                    <label for="female">Nữ</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" id="job">
+                    <label for="job">Tôi đã có nghề nghiệp ổn định</label>
+    
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <label for="region">Đến từ:</label>
+                    <select id="region" name="region">
+                        <option value="mien-bac">Miền Bắc</option>
+                        <option value="mien-trung">Miền Trung</option>
+                        <option value="mien-nam">Miền Nam</option>
+                        <option value="mien-tay">Miền Tây</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <label for="content">Nội dung cần gửi đến chúng tôi:</label>
+                <br>
+                    <textarea id="content" name="content" cols="40" rows="5" placeholder="Nội dung bạn hãy điền vào đây"></textarea>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="button-container">
+                    <button type="submit">Gởi thông điệp</button>
+                    <button onclick="reset()">Nhập lại tất cả</button>
+                
+                </td>
+
+            </tr>
+        </table>
+
+    </form>
+
+    
+
+
+
+
+</body>
+</html>

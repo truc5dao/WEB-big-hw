@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Classifieds Search Form</title>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        table {
+            border-collapse: collapse; /* Ensures there is no spacing between cells */
+            width: 100%; /* Make table width 100% */
+        }
+        th, td {
+            text-align: left; /* Aligns content to the left */
+            padding: 0; /* Removes padding */
+            margin: 0; /* Removes margin */
+            width: 33%; /* Set fixed width for each column */
+        }
+
+        tr {
+            border-spacing: 0; /* Ensures no spacing between rows */
+        }
+    </style>
+</head>
+<body style="background-color: #ccffff;">
+
+    <h1 style="color: red;">Online Classifieds Search Form</h1>
+
+    <hr style="height: 2px; background-color: gray;">
+
+    <form>
+        <table>
+            <tr>
+                <td colspan="3">
+                    <p style="font-weight: bold;">1) Search for a classified in the following sections:</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="radio" id="emp" value="Employment">
+                    <label for="emp">Employment</label>
+                </td>
+                <td>
+                    <input type="radio" id="personal" value="Personal">
+                    <label for="personal">Personal</label>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="radio" id="forSale" value="For Sale">
+                    <label for="forSale">For Sale</label>
+                </td>
+                <td>
+                    <input type="radio" id="miscellaneous" value="Miscellaneous">
+                    <label for="miscellaneous">Miscellaneous</label>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="radio" id="housing" value="Housing">
+                    <label for="housing">Housing</label>
+                </td>
+                <td>
+                    <input type="radio" id="all" value="All of the above">
+                    <label for="all">All of the above</label>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td colspan="3">
+                    <p style="font-weight: bold;">2) Search the following publications:</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="checkbox" id="midwest" name="publication" value="Midwest Times">
+                    <label for="midwest">Midwest Times</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="modernNews" name="publication" value="Modern News">
+                    <label for="modernNews">Modern News</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="employmentToday" name="publication" value="Employment Today">
+                    <label for="employmentToday">Employment Today</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="checkbox" id="greatLakes" name="publication" value="Great Lakes Classifieds">
+                    <label for="greatLakes">Great Lakes Classifieds</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="middleton" name="publication" value="Middleton Daily">
+                    <label for="middleton">Middleton Daily</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="castown" name="publication" value="Castown Daily News">
+                    <label for="castown">Castown Daily News</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="5">
+                    <p style="font-weight: bold;">3) From to
+                    <input type="date" id="startDate" name="startDate">
+                    <label for="endDate">to</label>
+                    <input type="date" id="endDate" name="endDate">
+                </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3">
+                    <p style="font-weight: bold;">4) Enter a few keywords to describe the classified:</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3">
+                    <input type="text" id="keywords" name="keywords" size="60">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3">
+                    <p style="font-weight: bold;">5) Click one of the options below:</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <img src="hinh/Search.gif" onclick="searchSimulate()">
+                    <img src="hinh/Help.gif" onclick="displayHelp()">
+                    <img src="hinh/Cancel.gif" onclick="reset()">
+
+                </td>
+
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function searchSimulate() {
+            // Retrieve selected section
+            let section = document.querySelector('input[type="radio"]:checked');
+            let sectionValue = section ? section.value : "No section selected";
+    
+            // Retrieve selected publications
+            let publications = [];
+            document.querySelectorAll('input[name="publication"]:checked').forEach((checkbox) => {
+                publications.push(checkbox.value);
+            });
+    
+            // Retrieve date range
+            let startDate = document.getElementById("startDate").value || "not specified";
+            let endDate = document.getElementById("endDate").value || "not specified";
+    
+            // Retrieve keywords
+            let keywords = document.getElementById("keywords").value || "No keywords entered";
+    
+            // Display simulated search data
+            alert(
+                `Search Simulated!\n\n` +
+                `Section: ${sectionValue}\n` +
+                `Publications: ${publications.length > 0 ? publications.join(", ") : "None"}\n` +
+                `Date Range: ${startDate} to ${endDate}\n` +
+                `Keywords: ${keywords}`
+            );
+        }
+
+        function displayHelp() {
+            // Open the help page in a new tab
+            window.open("help.html", "_blank");
+        }
+    </script>
+    
+
+</body>
+</html>

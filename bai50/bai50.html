@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Classifieds Search Form</title>
+
+    <style>
+        p {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        table {
+            border-collapse: collapse; /* Ensures there is no spacing between cells */
+            width: 100%; /* Make table width 100% */
+        }
+        th, td {
+            text-align: left; /* Aligns content to the left */
+            width: 33%; /* Set fixed width for each column */
+            padding: 10px;
+
+        }
+
+        tr {
+            border-spacing: 10px; /* Ensures no spacing between rows */
+        }
+    </style>
+</head>
+<body style="background-color: #ccffff;">
+
+    <p>
+        <img src="hinh/DeLong.jpg">
+    </p>
+    <h3>Travel Expense Report</h3>
+
+    <hr style="height: 2px; background-color: gray;">
+
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label for="fname">1) First Name:</label>
+                    <input type="text" id="fname" name="fname" required>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" required></td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="ssn">2) Social Security Number:</label>
+                    <input type="number" id="ssn" name="ssn" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="dep">3) Department:</label>
+                    <select id="dep">
+                        <optgroup label="Northern Branch">
+                            <option value="pns" selected>Human Resources Department</option>
+                            <option value="phc">Administrative Department</option>
+                        </optgroup>
+                        <optgroup label="Central Branch">
+                            <option value="dev" selected>Programming Department</option>
+                            <option value="mar">Marketing Department</option>
+                        </optgroup>
+                        <optgroup label="Southern Branch">
+                            <option value="cskh" selected>Accounting</option>
+                            <option value="mar">Marketing Department</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="des">4) Describe the purpose of your trip.</label>
+                    <br>
+                    <br>
+                    <textarea id="des" cols="70" rows="4"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="item">5) Itemize your travel expenses</label>
+                    <table id="item" border="2px">
+                        <thead>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="date">
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td>
+                                    <select name="cat">
+                                        <option value="Meal" selected>Meal</option>
+                                        <option value="Water">Water</option>
+                                        <option value="Accomodation">Accomodation</option>
+                                    </select>
+
+                                </td>
+
+                                <td>
+                                    <input type="number">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="date">
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td>
+                                    <select name="cat">
+                                        <option value="Meal" selected>Meal</option>
+                                        <option value="Water">Water</option>
+                                        <option value="Accomodation">Accomodation</option>
+                                    </select>
+
+                                </td>
+
+                                <td>
+                                    <input type="number">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="date">
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td>
+                                    <select name="cat">
+                                        <option value="Meal" selected>Meal</option>
+                                        <option value="Water">Water</option>
+                                        <option value="Accomodation">Accomodation</option>
+                                    </select>
+
+                                </td>
+
+                                <td>
+                                    <input type="number">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="date">
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td>
+                                    <select name="cat">
+                                        <option value="Meal" selected>Meal</option>
+                                        <option value="Water">Water</option>
+                                        <option value="Accomodation">Accomodation</option>
+                                    </select>
+
+                                </td>
+
+                                <td>
+                                    <input type="number">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="sub">6) Have you submitted your receipts?</label>
+                    <input id="y" type="radio" value="Yes" name="sub">
+                    <label for="y">Yes</label>
+            
+                    <input id="n" type="radio" value="No" name="sub">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <button onclick="alert('Travel expenses submitted.')">Submit travel expenses</button>
+                    <button onclick="reset()">Reset</button>
+
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>Questions? Contact Debbie Larson in Accouting (ext. 2150)</td>
+            </tr>
+
+        </table>
+    </form>
+
+</body>
+</html>

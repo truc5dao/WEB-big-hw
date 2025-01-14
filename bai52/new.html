@@ -1,0 +1,47 @@
+<!-- chac se can doi lai -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Received Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .data-container {
+            margin-top: 20px;
+        }
+        .data-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thông tin đã gửi:</h1>
+    <div class="data-container" id="dataContainer">
+        <!-- Fetched data will be displayed here -->
+    </div>
+
+    <script>
+        // Fetch query parameters from the URL
+        const params = new URLSearchParams(window.location.search);
+
+        // Create a container for displaying the data
+        const dataContainer = document.getElementById('dataContainer');
+
+        // Iterate over all parameters and display them
+        params.forEach((value, key) => {
+            const dataItem = document.createElement('div');
+            dataItem.className = 'data-item';
+            dataItem.innerHTML = `<strong>${key}:</strong> ${value}`;
+            dataContainer.appendChild(dataItem);
+        });
+    </script>
+</body>
+</html>
